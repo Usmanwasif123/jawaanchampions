@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { NAV_LINKS } from "@/constant";
-import Image from "next/image";
 import Link from "next/link";
 
 const Navbar = () => {
@@ -15,20 +14,20 @@ const Navbar = () => {
   return (
     <nav className="navbar flexBetween max-container padding-container relative z-30 py-5 gap-5">
       <Link href="/">
-        <Image src="/jawan.png" alt="logo" width={100} height={50} />
+        <img src="/jawan.png" alt="logo" width={100} height={50} />
       </Link>
       <ul
-        className={`lg:flex lg:flex-grow lg:justify-center gap-12 transition-transform duration-300 ease-in-out ${
-          menuOpen ? 'flex flex-col items-center absolute md:top-0 top-36 left-0 w-full h-screen bg-white z-20' : 'hidden'
-        } xl:mt-[-2rem] lg:mt-[0rem] lg:static lg:bg-transparent lg:h-auto lg:flex-row`}>
+        className={`lg:flex lg:flex-grow xl:justify-center xl:items-end lg:justify-center justify-center items-center gap-12 transition-transform duration-300 ease-in-out ${
+          menuOpen ? 'flex flex-col items-center absolute lg:h-[0] h-[500px] md:top-36 top-36 left-0 w-full h-screen bg-white z-20' : 'hidden'
+        } xl:mt-[-2rem]`}>
         {NAV_LINKS.map((link) => (
-          <Link href={link.href} key={link.key} className="bold-16 md:font-5 xl:bold-16 text-[#464646] text-center flexCenter uppercase cursor-pointer py-4 transition-all font-bold hover:text-green-60 font-boogaloo lg:py-0">
+          <Link href={link.href} key={link.key} className="bold-16 md:font-5 xl:bold-16 text-[#464646] text-center flexCenter uppercase cursor-pointer transition-all font-bold hover:text-green-60 font-boogaloo md:py-0 lg:py-0">
             {link.label}
           </Link>
         ))}
       </ul>
 
-      <Image
+      <img
         src={menuOpen ? "/close.svg" : "/menu.svg"}
         alt="menu"
         width={32}

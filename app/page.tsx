@@ -1,23 +1,21 @@
-import Theory from "@/components/Theory";
-import Stories from "@/components/Stories";
-import Reach from "@/components/Reach";
-import Guide from "@/components/Statement";
-import Hero from "@/components/Hero";
-import Location from "@/components/Location";
-import Goals from "@/components/Goals";
-import Partner from "@/components/Partner";
+import Goals from "@/components/HomeComp/Goals"
+import Hero from "@/components/HomeComp/Hero"
+import Location from "@/components/HomeComp/Location"
+import Partner from "@/components/HomeComp/Partner"
+import Reach from "@/components/HomeComp/Reach"
+import Statement from "@/components/HomeComp/Statement"
+import Stories from "@/components/HomeComp/Stories"
 
 export default function Home() {
   return (
     <>
-    <Hero/>
-    <Theory/>
-    <Guide/>
-    <Stories/>
-    <Reach/>
-    <Location/>
-    <Goals/>
-    <Partner/>
+        <Hero/>
+        <Statement/>
+        <Stories/>
+        <Reach/>
+        <Location/>
+        <Goals/>
+        <Partner/>
     </>
   );
 }

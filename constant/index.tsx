@@ -1,12 +1,12 @@
 // NAVIGATION
 export const NAV_LINKS = [
     { href: '/', key: 'home', label: 'Home' },
-    { href: '/', key: 'our_journey', label: 'Our Journey' },
+    { href: '/our-journey', key: 'our-journey', label: 'Our Journey' },
     { href: '/', key: 'programes', label: 'Programes' },
     { href: '/', key: '_gallery', label: 'Gallery' },
     { href: '/', key: 'news', label: 'News' },
-    { href: '/', key: 'your_contribution ', label: 'your contribution' },
-    { href: '/', key: 'contact_us', label: 'Contact Us' },
+    { href: '/your-contribution', key: 'your-contribution ', label: 'your contribution' },
+    { href: '/contact-us', key: 'contact-form', label: 'Contact Us' },
   ];
   
   // CAMP SECTION
