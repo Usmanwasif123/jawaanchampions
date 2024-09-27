@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 export default function ContactForm() {
   // State to manage form data
@@ -87,13 +88,13 @@ export default function ContactForm() {
 
     setFormStatus({ ...formStatus, submitting: true, error: null });
 
+    // EmailJS integration
+    const serviceId = 'service_5u7hjal';
+    const templateId = 'template_mbm451d';
+    const userId = 'BJwjHcjvuOk28UDNC';
+
     try {
-      // Here you can replace with actual API call
-      // e.g., await fetch('/api/contact', { method: 'POST', body: JSON.stringify(formData) });
-      
-      console.log('Form Data Submitted: ', formData);
-      
-      // Reset the form
+      await emailjs.send(serviceId, templateId, formData, userId);
       setFormData({
         name: '',
         subject: '',
@@ -108,6 +109,7 @@ export default function ContactForm() {
     }
   };
 
+
   return (
     <section className="min-h-screen flex items-center justify-center md:items-start md:justify-start mb-40">
         <img
@@ -119,9 +121,7 @@ export default function ContactForm() {
         <h2 className="tlg:text-xl text-center mb-8 md:mb-20 md:text-lg text-2xl xl:text-3xl 2xl:text-4xl text-[#006837] 
         font-semibold font-boogaloo uppercase">CONTACT US</h2>
 
-        {/* Display form submission status */}
-        {formStatus.error && <p className="text-red-500 mb-4 text-center">{formStatus.error}</p>}
-        {formStatus.submitted && <p className="text-green-500 mb-4 text-center">Your message has been sent successfully!</p>}
+       
 
         <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-x-36 relative z-20">
           {/* Left Side */}
@@ -276,13 +276,16 @@ export default function ContactForm() {
             <button
               type="submit"
               disabled={formStatus.submitting}
-              className="px-6 py-2.5 bg-red-90 text-white-10 font-semibold rounded-3xl hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-400"
+              className="mb-4 px-6 py-2.5 bg-red-90 text-white-10 font-semibold rounded-3xl hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-400"
             >
               {formStatus.submitting ? 'Submitting...' : 'SUBMIT'}
             </button>
           </div>
-
         </form>
+
+         {/* Display form submission status */}
+         {formStatus.error && <p className="text-red-500 mb-4 text-center">{formStatus.error}</p>}
+        {formStatus.submitted && <p className="text-green-500 mb-4 text-center">Your message has been sent successfully!</p>}
       </div>
       <img
         src='green-circle-contact.png'

@@ -2,14 +2,14 @@ import React from 'react'
 
 const Statement = () => {
   return (
-    <section className='flexCenter flex-col'>
-  <div className='padding-container max-container w-full pb-24'>
+    <section className='flexCenter flex-col pb-10 md:pb-10'>
+  <div className='padding-container max-container w-full '>
     <div className='grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-10'>
       <div className='flex flex-col justify-center items-center' data-aos="fade-right"
      data-aos-offset="300"
      data-aos-easing="ease-in-sine">
-      <h2 className='bold-40 lg:bold-32 font-boogaloo uppercase text-center text-[#006837] mb-5'>Mission Statement</h2>
-      <p className='regular-16 text-[#8e8d8d] xl:max-w-[520px] flex justify-center items-center text-center font-normal font-mont'>
+      <h2 className='lg:text-xl md:text-lg text-2xl xl:text-3xl 2xl:text-4xl font-boogaloo uppercase text-center text-[#006837] mb-5'>Mission Statement</h2>
+      <p className='lg:text-sm md:text-sm text-sm xl:text-md 2xl:text-lg text-[#8e8d8d] xl:max-w-[520px] flex justify-center items-center text-center font-normal font-mont'>
       We aim to foster understanding and integration of physical education (PE) into the current education system by providing comprehensive training for teachers which will help uplift communities. 
       </p>
       </div>
@@ -53,8 +53,8 @@ const Statement = () => {
       <div className='flex flex-col justify-center items-center' data-aos="fade-left"
      data-aos-offset="300"
      data-aos-easing="ease-in-sine">
-      <h2 className='bold-40 lg:bold-32 font-boogaloo uppercase text-center text-[#006837] mb-5'>vision Statement</h2>
-      <p className='regular-16 text-[#8e8d8d] xl:max-w-[520px] flex justify-center items-center text-center font-normal font-mont'>
+      <h2 className='lg:text-xl md:text-lg text-2xl xl:text-3xl 2xl:text-4xl font-boogaloo uppercase text-center text-[#006837] mb-5'>vision Statement</h2>
+      <p className='lg:text-sm md:text-sm text-sm xl:text-md 2xl:text-lg text-[#8e8d8d] xl:max-w-[520px] flex justify-center items-center text-center font-normal font-mont'>
        The Pakistan Centre for Sports and Leadership is dedicated to utilizing the influential combination of sports and leadership to drive meaningful social change, particularly among the nation's youth (Jawaan) through creating Champions of Change. 
       </p>
       </div>

@@ -7,6 +7,17 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'xss': '320px',
+        'xs': '375px',
+        'sm': '425px',
+        'md': '768px', // default Tailwind
+        'lg': '1024px', // default Tailwind
+        'xl': '1280px', // default Tailwind
+        '2xl': '1536px', // default Tailwind
+        '3xl': '1680px',
+        '4xl': '2200px',
+    },
       colors: {
         green: {
           50: '#30AF5B',
@@ -30,14 +41,17 @@ module.exports = {
         blue: {
           70: '#021639',
           80: '#012b60',
+          90: '#132c60',
         },
         yellow: {
           50: '#FEC601',
           80: '#fea334',
+          70: '#fea533',
         },
         red: {
           80: '#b73636',
-          90: '#b53636'
+          90: '#b53636',
+          70: '#b93636',
         },
         white: {
           10: '#f6f4f3',
@@ -52,11 +66,6 @@ module.exports = {
         'feature-bg': "url('/feature-bg.png')",
         pattern: "url('/pattern.png')",
         'pattern-2': "url('/pattern-bg.png')",
-      },
-      screens: {
-        'xs': '400px',
-        '3xl': '1680px',
-        '4xl': '2200px',
       },
       maxWidth: {
         '10xl': '1512px',

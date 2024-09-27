@@ -2,9 +2,9 @@
 export const NAV_LINKS = [
     { href: '/', key: 'home', label: 'Home' },
     { href: '/our-journey', key: 'our-journey', label: 'Our Journey' },
-    { href: '/', key: 'programes', label: 'Programes' },
-    { href: '/', key: '_gallery', label: 'Gallery' },
-    { href: '/', key: 'news', label: 'News' },
+    { href: '/our-programs', key: 'programs', label: 'Programs' },
+    { href: '/gallery', key: '_gallery', label: 'Gallery' },
+    { href: '/news', key: 'news', label: 'News' },
     { href: '/your-contribution', key: 'your-contribution ', label: 'your contribution' },
     { href: '/contact-us', key: 'contact-form', label: 'Contact Us' },
   ];

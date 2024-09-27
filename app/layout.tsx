@@ -1,4 +1,3 @@
-
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -17,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="m-0 p-0 h-[100vw]">
+    <html lang="en" className="m-0 p-0">
       <head>
         {/* Add Google Fonts or any other custom fonts here */}
         <link

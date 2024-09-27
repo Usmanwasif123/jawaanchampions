@@ -19,7 +19,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className='hero max-container padding-container flex flex-col justify-between gap-10 py-10 pb-32 md:gap-28 
+    <section className='hero max-container padding-container flex flex-col justify-between gap-10 py-10 pb-32 md:pb-10 md:gap-28 
     lg:py-20 xl:flex-row'>
     <img 
     src='/hero-bg-left.png'
@@ -40,7 +40,7 @@ const Hero = () => {
     {/* Left */}
 
     <div className='relative z-20 flex flex-1 flex-col justify-start xl:w-[28%]'>
-    <div className='bold-18 lg:bold-88 z-20 xl:w-[150%] w-[70%] flex flex-1 flex-col justify-start items-start pb-32 md:pb-44 xl:pb-0'>
+    <div className='bold-18 lg:bold-88 z-20 xl:w-[150%] w-[70%] flex flex-1 flex-col justify-start items-start pb-2 md:pb-44 xl:pb-0'>
     <img 
     src='/we_are.png'
     alt='we_are'
@@ -77,39 +77,50 @@ const Hero = () => {
      data-aos-duration="2000">champions</h2>
      
     </div>
+
+    {/* Right */}
+
+    <div className='relative w-full justify-end items-end lg:hidden block'>
+    <img 
+                src="/hero-right.png"
+                alt='man-running'
+                className='xl:ml-[7.5rem] lg:ml-[9rem] ml-[6rem] w-10/12 h-10/12' data-aos="fade-left"
+                data-aos-anchor="#example-anchor"
+                data-aos-offset="500"
+                data-aos-duration="500"
+                />
+    </div>
     
-    <div className='flex flex-wrap justify-start items-center'>
+    <div className='flex justify-start items-center w-9/12 h-9/12 lg:w-full lg:h-full'>
     <img 
         src="/cloud-hero-left.png"
         alt='cloud'
-        height={180}
-        width={180}
-        className='absolute z-10 lg:mt-[-22rem] lg:ml-[-1rem] mt-[-26rem]'
+        height={120}
+        width={120}
+        className='absolute z-10 lg:mt-[-22rem] lg:ml-[-1rem] mt-[-20rem]'
         />
 
         <img 
         src="/hero-left.png"
         alt='women-with-football'
-        height={300}
-        width={300}
-        className='z-20' data-aos="fade-right"
+        className='z-20 w-9/12 h-9/12 lg:w-full lg:h-full' data-aos="fade-right"
         data-aos-offset="300"
         data-aos-easing="ease-in-sine"
         />
         <img 
         src="/grass-hero-left.png"
         alt='grass'
-        height={70}
-        width={70}
-        className='z-10 absolute lg:mt-[18rem] lg:ml-[0.1rem] mt-[18rem]'
+        height={50}
+        width={50}
+        className='z-10 absolute lg:mt-[18rem] lg:ml-[0.1rem] mt-[10rem]'
         />
 
        <img 
         src="/paint-hero-left.png"
         alt='circles'
-        height={300}
-        width={300}
-        className='z-10 absolute lg:mt-[35rem] lg:ml-[-5rem] mt-[35rem]'
+        height={100}
+        width={100}
+        className='z-10 absolute lg:mt-[35rem] lg:ml-[-5rem] mt-[20rem]'
         />
     </div>
     <img 
@@ -124,21 +135,23 @@ const Hero = () => {
         alt='blue-vector'
         height={100}
         width={100}
-        className='z-10 absolute xl:mt-[42rem] xl:ml-[30rem] lg:mt-[42rem] lg:ml-[33rem] md:mt-[42rem] md:ml-[30rem] hidden md:block'
+        id='vector'
+        className='z-10 absolute xl:mt-[42rem] xl:ml-[30rem] lg:mt-[42rem] lg:ml-[33rem] md:mt-[42rem] md:ml-[30rem] ml-56 mt-[45rem]'
         />
         <img 
         src="/middle-circle-hero.png"
         alt='hero-circle'
         height={150}
         width={150}
-        className='z-10 absolute xl:mt-[50rem] xl:ml-[35rem] lg:mt-[50rem] lg:ml-[40rem] md:mt-[50rem] md:ml-[33rem] hidden md:block'
+        id='circle'
+        className='z-10 absolute xl:mt-[50rem] xl:ml-[35rem] lg:mt-[50rem] lg:ml-[40rem] md:mt-[50rem] md:ml-[33rem] ml-60 mt-[50rem]'
         />
     </div>
    
 
     {/* Right */}
 
-    <div className='relative w-full justify-end items-end'>
+    <div className='relative w-full justify-end items-end hidden lg:block'>
     <img 
                 src="/hero-right.png"
                 alt='man-running'
@@ -150,6 +163,72 @@ const Hero = () => {
                 data-aos-duration="500"
                 />
     </div>
+    <style jsx>{`
+        #circle {
+          margin-top: 33rem;
+        }
+        @media (min-width: 375px) {
+          #circle {
+            margin-top: 40rem;
+        }
+        }
+        @media (min-width: 425px) {
+          #circle {
+            margin-top: 45rem;
+        }
+        }
+        @media (min-width: 768px) {
+          #circle {
+             margin-top: 90rem;/* For larger screens like tablets */
+          }
+        }
+        @media (min-width: 1024px) {
+          #circle {
+             margin-top: 100rem;/* For desktops */
+          }
+        }
+         @media (min-width: 1280px) {
+          #circle {
+             margin-top: 55rem; /* For large desktops */
+          }
+         @media (min-width: 2560px) {
+          #circle {
+            margin-top: 55rem;/* For large desktops */
+          }
+            `}</style>
+            <style jsx>{`
+        #vector {
+          margin-top: 30rem;
+        }
+        @media (min-width: 375px) {
+          #vector {
+            margin-top: 37rem;
+        }
+        }
+         @media (min-width: 425px) {
+          #vector {
+            margin-top: 43rem;
+        }
+        }
+        @media (min-width: 768px) {
+          #vector {
+             margin-top: 88rem; /* For larger screens like tablets */
+          }
+        }
+        @media (min-width: 1024px) {
+          #vector {
+             margin-top: 95rem; /* For desktops */
+          }
+        }
+         @media (min-width: 1280px) {
+          #vector {
+             margin-top: 53rem; /* For large desktops */
+          }
+         @media (min-width: 2560px) {
+          #vector {
+            margin-top: 53rem;/* For large desktops */
+          }
+            `}</style>
     </section>
   )
 }

@@ -11,6 +11,10 @@ const Navbar = () => {
     setMenuOpen(!menuOpen);
   };
 
+  const handleLinkClick = () => {
+    setMenuOpen(false); // Close the menu when a link is clicked
+  };
+
   return (
     <nav className="navbar flexBetween max-container padding-container relative z-30 py-5 gap-5">
       <Link href="/">
@@ -18,10 +22,15 @@ const Navbar = () => {
       </Link>
       <ul
         className={`lg:flex lg:flex-grow xl:justify-center xl:items-end lg:justify-center justify-center items-center gap-12 transition-transform duration-300 ease-in-out ${
-          menuOpen ? 'flex flex-col items-center absolute lg:h-[0] h-[500px] md:top-36 top-36 left-0 w-full h-screen bg-white z-20' : 'hidden'
+          menuOpen ? 'flex flex-col items-center absolute lg:h-[0] h-[550px] md:top-36 top-36 left-0 w-full h-screen bg-white z-20' : 'hidden'
         } xl:mt-[-2rem]`}>
         {NAV_LINKS.map((link) => (
-          <Link href={link.href} key={link.key} className="bold-16 md:font-5 xl:bold-16 text-[#464646] text-center flexCenter uppercase cursor-pointer transition-all font-bold hover:text-green-60 font-boogaloo md:py-0 lg:py-0">
+          <Link
+            href={link.href}
+            key={link.key}
+            className="bold-16 md:font-5 xl:bold-16 text-[#464646] text-center flexCenter uppercase cursor-pointer transition-all font-bold hover:text-green-60 font-boogaloo md:py-0 lg:py-0"
+            onClick={handleLinkClick} // Close the menu when a link is clicked
+          >
             {link.label}
           </Link>
         ))}

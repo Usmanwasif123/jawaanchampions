@@ -19,14 +19,13 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className='hero max-container padding-container flex flex-col justify-between gap-10 py-20 pb-32 md:gap-28 
-    lg:py-20 xl:flex-row md:mb-14 lg:mb-0 xl:mb-10 2xl:mb-20'>
+    <section className='hero w-full max-container padding-container flex flex-col justify-between gap-1 xl:flex-row'>
     <img 
     src='/hero-bg-left.png'
     alt='bg-design'
-    width={300}
-    height={300}
-    className='xl:ml-[-8rem] lg:ml-[-5rem] md:ml-[-7.5rem] lg:mt-[30rem] absolute hidden md:block'
+    width={200}
+    height={200}
+    className='xl:ml-[-8rem] lg:ml-[-5rem] md:ml-[-7.5rem] lg:mt-[40rem] absolute hidden md:block'
     />
 
 <img 
@@ -39,8 +38,8 @@ const Hero = () => {
 
     {/* Left */}
 
-    <div className='relative z-20 flex flex-1 flex-col justify-start xl:w-[28%]'>
-    <div className='bold-18 lg:bold-88 z-20 xl:w-[150%] w-[70%] flex flex-1 flex-col justify-start items-start pb-5 md:pb-44 xl:pb-0'>
+    <div className='relative z-20 flex flex-1 flex-col justify-start xl:w-[28%] p-5'>
+    <div className='bold-18 lg:bold-88 z-20 xl:w-[150%] w-[70%] flex flex-1 flex-col justify-start items-start pb-0 md:pb-44 xl:pb-0'>
     <img 
     src='/become.png'
     alt='become'
@@ -57,7 +56,7 @@ const Hero = () => {
     width={650}
     height={650}
     data-aos="fade-left"
-    data-aos-offset="300"
+      data-aos-duration="2000"
     data-aos-easing="ease-in-sine"
     className='xl:mt-[1rem] xl:ml-[7rem] lg:mt-[0rem] md:mt-[0rem] mt-[0rem]'
      />
@@ -66,10 +65,10 @@ const Hero = () => {
     alt='empower'
     width={450}
     height={450}
-    data-aos="flip-left"
+    data-aos="fade-right"
      data-aos-easing="ease-out-cubic"
      data-aos-duration="2000"
-     className='xl:mt-[1rem] xl:ml-[7rem] lg:-[-5rem] md:mt-[0rem] mt-[1rem]'
+     className='xl:mt-[1rem] xl:ml-[7rem] lg:-[-5rem] md:mt-[0rem] mt-[0rem]'
      />
      
     <h2 className='text-[#006837] invisible'  data-aos="flip-left"
@@ -77,37 +76,49 @@ const Hero = () => {
      data-aos-duration="2000">champions</h2>
      
     </div>
-    
-    <div className='flex flex-wrap justify-start items-center'>
-
     <img 
         src="/green-circle-left-hero.png"
         alt='green-circle-left-hero'
         height={130}
         width={130}
-        className='z-10 absolute xl:mt-[1rem] xl:ml-[-9rem] lg:ml-[-5rem] hidden lg:block'
+        className='z-10 absolute md:mt-[35rem] md:-ml-20 lg:mt-[20rem] lg:ml-[-8rem] xl:mt-[16rem] xl:ml-[-9rem] lg:ml-[-5rem] 2xl:mt-[20rem] hidden md:block'
         />
 
         <img 
         src="/paint-hero-left.png"
         alt='circles'
-        height={300}
-        width={300}
-        className='z-0 absolute xl:mt-[-10rem] xl:ml-[-7rem] rotate-[180deg] hidden md:block'
+        height={200}
+        width={200}
+        className='z-0 absolute md:mt-[33rem] md:-ml-20 lg:mt-[20rem] lg:ml-[-8rem] xl:mt-[15rem] xl:ml-[-9rem] 2xl:mt-[19rem] rotate-[180deg] hidden md:block'
         />
+
+        {/* Right */}
+
+    <div className='relative w-full justify-end items-end xl:hidden block'>
+    <img 
+                src="/men-hero-contribution.png"
+                alt='men-hero-contribution'
+                className='xl:ml-[7.5rem] md:mt-[-10rem] lg:mt-[-15rem] lg:ml-[9rem] ml-[3rem] w-full h-full' data-aos="fade-left"
+                data-aos-anchor="#example-anchor"
+                data-aos-offset="500"
+                data-aos-duration="500"
+                />
     </div>
+    
+    <div className='flex flex-wrap justify-center lg:pr-20 items-center w-screen lg:-mt-40'>
+    <div className='flex flex-row justify-start items-start lg:w-8/12 lg:h-8/12 xl:w-5/12 xl:h-5/12  lg:pr-96 md:pr-[40rem] pr-[19rem]'>
         <img 
         src="/ball-hero-contribution.png"
         alt='ball-hero-contribution'
-        height={120}
-        width={120}
-        className='z-10 absolute xl:mt-[17rem] xl:ml-[25rem] lg:mt-[47rem] lg:ml-[8rem] md:mt-[40rem] md:ml-[0rem] hidden md:block'
+        className='z-10 2xl:ml-[-5rem] 2xl:mt-[-3rem] xl:mt-[-1rem] xl:-ml-10 lg:-mt-60 lg:-ml-28 md:-mt-[30rem] -mt-36 lg:w-3/6 lg:h-3/6 xl:w-3/6 xl:h-3/6 2xl:w-3/6 2xl:h-3/6 w-3/6 h-3/6'
         />
-        <div className='absolute top-[23rem] left-[-4.5rem] xl:top-[27rem] xl:left-[20rem] lg:top-[65rem] md:top-[65rem] top-[23rem] left-[-4.5rem] p-16 w-full md:w-[40rem] text-center font-medium font-mont'>
-        <p className='mb-5 lg:text-sm md:text-xs text-xs xl:text-md 2xl:text-lg'>
+        </div>
+    </div>
+        <div className='flex flex-col justify-center items-center gap-5 md:gap-5 2xl:gap-10 -mt-6 md:-mt-20 md:-ml-11 lg:-mt-[5rem] lg:-ml-28 xl:-ml-[5rem] xl:mt-[-15rem] 2xl:mt-[-14rem] 2xl:-ml-[10rem] w-full md:h-[1%] lg:h-[1%] xl:h-[1%] 2xl:h-[1%] md:w-screen md:p-16 lg:p-40 xl:p-[27rem] 2xl:p-[26rem] text-center font-medium font-mont'>
+        <p className='lg:text-sm md:text-xs text-xs xl:text-md 2xl:text-lg'>
         In the heart of developing countries, children face formidable challenges-violence, limited opportunities, gender inequality, climate change, illiteracy, and poverty. Yet, within these young hearts lies the potential for greatness.   
         </p>
-        <h2 className='mb-5 font-semibold text-[#006837] lg:text-md md:text-sm text-xs xl:text-lg 2xl:text-xl'>
+        <h2 className='font-semibold text-[#006837] lg:text-md md:text-sm text-xs xl:text-lg 2xl:text-xl'>
         At Jawaan Champions, we harness the universal language of sports to break down these barriers and unleash that potential
         </h2>
         <p className='lg:text-sm md:text-xs text-xs xl:text-md 2xl:text-lg'>
@@ -121,13 +132,11 @@ const Hero = () => {
 
     {/* Right */}
 
-    <div className='relative w-full justify-end items-end'>
+    <div className='relative w-full h-[50%] justify-start items-start hidden xl:block'>
     <img 
                 src="/men-hero-contribution.png"
                 alt='men-hero-contribution'
-                height={1500}
-                width={1500}
-                className='xl:ml-[7.5rem] lg:ml-[9rem] ml-[1.4rem]' data-aos="fade-left"
+                className='2xl:ml-[7.5rem] xl:ml-[7rem] lg:ml-[9rem] ml-[1.4rem] w-full h-full' data-aos="fade-left"
                 data-aos-anchor="#example-anchor"
                 data-aos-offset="500"
                 data-aos-duration="500"

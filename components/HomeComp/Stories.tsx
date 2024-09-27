@@ -6,25 +6,25 @@ import { useRouter } from 'next/navigation'; // Import useRouter from next/navig
 const storiesData = [
   {
     title: 'Rounders on Blackboard: Overcoming Limitations with Creativity',
-    description: "In a small, bustling school with no outdoor space, a group of students faced the challenge of having no playground for their beloved game of rounders, a modified sport introduced by Jawaan Champions. This was also the first time they truly understood the importance of physical activity and education. Undeterred, they turned adversity into opportunity by practicing on a blackboard for six months.",
+    description: "In a school without outdoor space, a group of students refused to give up their love for rounders, a modified sport introduced by Jawaan Champions.",
     image: '/story1.png',
     url: '/success-stories',
   },
   {
     title: 'Active School, Raised Admissions: Transforming Education and Community',
-    description: "When St. Jude’s High School in North Nazimabad first partnered with Jawaan Champions, their primary goal was to improve their students’ health and well-being. Little did they know, this decision would completely transform their school's reputation and culture. By incorporating Jawaan Champions’ modified sports programs into their manifesto, making them part of the active schools program, the benefits extended far beyond the school gates.",
+    description: "When St. Jude’s High School in North Nazimabad first partnered with Jawaan Champions, their primary goal was to improve their students’ health and well-being.",
     image: '/story2.png',
     url: '/success-stories',
   },
   {
     title: 'Empowerment Through Physical Activity: A Teacher’s Impact',
-    description: "Mr. Ali, a school teacher, faced challenges in engaging his students in physical activity due to limited resources. Jawaan Champions provided him with the training and tools to transform his classroom into a dynamic learning environment. By incorporating innovative, modified games that catered to all students, he ignited a new spark of enthusiasm in his class. The positive ripple effect was astonishing; not only did the student engagement soar, but academic performance also saw a remarkable uplift.",
+    description: "Mr. Ali, a school teacher, faced challenges in engaging his students in physical activity due to limited resources.",
     image: '/story3.png',
     url: '/success-stories',
   },
   {
     title: 'Faith and Passion: Breaking Barriers in Sports',
-    description: "For years, sports had been a boys' domain in many Pakistani schools and the girls have often found themselves limited to the sidelines with their potential untapped. Amina, a bright, young girl, had always loved the thrill of competition. But as she grew older, the demands of her school and societal expectations began to draw invisible lines around her. The hijab, a symbol of her faith, now felt like a barrier.",
+    description: "For years, sports had been a boys' domain in many Pakistani schools and the girls have often found themselves limited to the sidelines with their potential untapped.",
     image: '/story4.png',
     url: '/success-stories',
   },
@@ -55,23 +55,26 @@ const Stories = () => {
   };
 
   return (
-    <section className="flexCenter flex-col lg:pr-0 lg:pl-0 pr-16 pl-16 relative">
-      <div className="padding-container max-container w-full pb-24 flex flex-col justify-center items-center">
-        <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-32 lg:gap-0 lg:h-[500px] w-full lg:mt-5 paper-effect border-l-2 border-r-2 border-green-70">
-          <div className="relative z-20 flex flex-col justify-start items-center gap-24 text-white p-8">
-            <h2 className="bold-20 lg:bold-32 text-white font-boogaloo uppercase text-center z-20">Success Stories</h2>
+    <section className="flexCenter flex-col lg:pr-0 lg:pl-0 pr-3 pl-3 relative pb-5 md:pb-10">
+      <h2 className="lg:text-xl md:text-lg text-2xl xl:text-3xl 2xl:text-4xl text-[#006837] font-boogaloo font-semibold uppercase text-center z-20 mb-10 md:hidden block">Success Stories</h2>
+      <div className="padding-container max-container w-full pb-5 flex flex-row justify-center items-center">
+        <div className="relative grid grid-cols-2 gap-5 lg:gap-0 w-full lg:mt-5 paper-effect border-l-2 border-r-2 border-green-70">
+          <div className="relative z-20 flex flex-col justify-start items-center gap-2 lg:gap-10 text-white p-2 md:p-8">
+            <h2 className="lg:text-xl md:text-lg text-2xl xl:text-3xl 2xl:text-4xl text-white font-boogaloo uppercase text-center z-20 hidden md:block">Success Stories</h2>
             <div className="flex flex-col justify-center items-center z-20">
-              <h3 className="bold-16 lg:bold-20 text-white font-boogaloo uppercase text-center">
+              <h3 className="lg:text-lg md:text-md text-sm xl:text-xl 2xl:text-2xl w-full text-white font-boogaloo uppercase text-center">
                 {storiesData[currentSlide].title}
               </h3>
-              <p className="regular-16 text-center text-white xl:max-w-[520px] font-normal font-mont">
+              <p className="lg:text-sm md:text-sm text-sm xl:text-md 2xl:text-lg text-center w-full text-white font-normal font-mont">
                 {storiesData[currentSlide].description}
               </p>
               <button
                 onClick={() => handleReadMore(storiesData[currentSlide].url)}
                 className="text-white border-2 border-white p-1 rounded-lg mt-4 bold-12 lg:bold-16 text-center font-normal font-mont"
-              >
+                >
+                
                 Read More
+                
               </button>
             </div>
             <img
@@ -87,33 +90,61 @@ const Stories = () => {
             <img
               src={storiesData[currentSlide].image}
               alt="story-image"
-              width={1500}
-              height={400}
               key={currentSlide}
-              className="lg:p-5"
+              className="w-full h-auto lg:p-5"
             />
           </div>
         </div>
       </div>
 
-      <div className='flex flex-row justify-center items-center gap-[14rem] md:gap-[40rem] lg:gap-[57rem] xl:gap-[82rem] 2xl:gap-[89rem] w-screen md:w-full absolute z-30 pl-20 pr-20'>
+      <div id='arrows' className='flex flex-row justify-center items-center bg-blue-900 gap-[22.5rem] md:gap-[40rem] lg:gap-[57rem] xl:gap-[82rem] 2xl:gap-[200rem] w-screen md:w-full absolute z-30 pl-20 pr-20'>
         <img
           src='/success-arrow.png'
           alt='success-arrow-prev'
-          width={40}
-          height={40}
-          className='rotate-[180deg] flex justify-start items-center lg:mt-[-5rem] cursor-pointer'
+          width={30}
+          height={30}
+          className='rotate-[180deg] flex justify-start items-center -mt-7 lg:mt-[-5rem] cursor-pointer'
           onClick={prevSlide}
         />
         <img
           src='/success-arrow.png'
           alt='success-arrow-next'
-          width={40}
-          height={40}
-          className='flex justify-end items-center lg:mt-[-5rem]  cursor-pointer'
+          width={30}
+          height={30}
+          className='flex justify-end items-center -mt-7 lg:mt-[-5rem] cursor-pointer'
           onClick={nextSlide}
         />
       </div>
+
+      {/* Custom gap styles for different screen sizes */}
+      <style jsx>{`
+        #arrows {
+          gap: 300px; 
+        }
+        @media (min-width: 375px) {
+          #arrows {
+            gap: 350px; 
+          }
+        }
+        @media (min-width: 768px) {
+          #arrows {
+            gap: 44rem; /* For larger screens like tablets */
+          }
+        }
+        @media (min-width: 1024px) {
+          #arrows {
+            gap: 60rem; /* For desktops */
+          }
+        }
+         @media (min-width: 1280px) {
+          #arrows {
+            gap: 85rem; /* For large desktops */
+          }
+         @media (min-width: 2560px) {
+          #arrows {
+            gap: 95rem; /* For large desktops */
+          }
+      `}</style>
     </section>
   );
 };

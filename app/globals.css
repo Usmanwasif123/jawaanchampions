@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 
@@ -37,7 +38,7 @@ body {
   }
 
   .padding-container {
-    @apply px-6 lg:px-20 3xl:px-0;
+    @apply px-6 lg:px-20;
   }
 
   .flexCenter {
@@ -87,6 +88,14 @@ body {
 
   .regular-14 {
     @apply text-[14px] font-[400];
+  }
+
+  .regular-12 {
+    @apply text-[12px] font-[400];
+  }
+
+  .regular-10 {
+    @apply text-[10px] font-[400];
   }
 
   .medium-14 {
@@ -206,6 +215,27 @@ body {
   @apply bg-green-70
 }
 
+.border-green{
+  @apply bg-green-70
+}
+
+.bg-red {
+  @apply bg-red-70
+}
+
+.bg-yellow {
+  @apply bg-yellow-70
+}
+
+.border-yellow{
+  @apply bg-yellow-70
+}
+
+.bg-dark-blue {
+  @apply bg-blue-90
+}
+
+
 .paper-effect {
   position: relative;
   overflow: hidden;
@@ -222,6 +252,7 @@ body {
   background: #48c580;
   clip-path: url(#torn-edge) !important; /* Force the clip-path to apply */
   z-index: 10;
+  
 }
 
 .paper-effect img {
@@ -236,6 +267,7 @@ AOS.init{
   duration: 1000;
   once: true,  
 };
+
 
 
 
